@@ -1,15 +1,20 @@
 const express = require('express');
 
-const app = express.Router();
+const router = express.Router();
+var mongoose  = require('mongoose');
 const path = require('path');
 const User = require('../models/user');
 
-app.get('/', (req, res)=>{
-  res.sendFile(path.join(__dirname + '/templates/login.html'));
-});
 
 
 
+
+router.get('/', function(req, res, next) {
+    res.render('navbar', { title: 'Nodejs user registration'});
+ })
+
+
+/*
 app.get('/test', (req, res)=>{
   res.sendFile(path.join(__dirname + '/templates/layout.html'));
 });
@@ -17,5 +22,6 @@ app.get('/test', (req, res)=>{
 app.get('/hello', (req, res)=>{
   res.sendFile(path.join(__dirname + '/hello.html'));
 });
+*/
 
-module.exports = app;
+module.exports = router;

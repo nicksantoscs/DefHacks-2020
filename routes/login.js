@@ -29,7 +29,7 @@ const { matchedData, sanitize }   = require('express-validator/filter');
 
     check('password')
     .isLength({ min: 5 }).withMessage('Password must be at least 5 chars long')
-    ),
+    
 
 
    ], function(req, res, next) {

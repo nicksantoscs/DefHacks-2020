@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 5000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+app.set('views', path.join(__dirname, 'view'));
+app.set('view engine', 'pug');
+
 require('dotenv/config');
 
 app.use(bodyParser.json());
@@ -17,6 +20,7 @@ const register = require('./routes/register');
 app.use('/login', loginRoute);
 app.use('/register', register);
 app.use('/pages', pages);
+
 
 
 app.get('/', (req, res)=>{

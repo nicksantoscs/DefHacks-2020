@@ -6,7 +6,7 @@ var crypto    = require('crypto'), hmac, signature;
 const { check, validationResult } = require('express-validator/check');
 const { matchedData, sanitize }   = require('express-validator/filter');
 
-   /* GET home page. */
+   /* GET registration page. */
   router.get('/', function(req, res, next) {
       res.render('registration', { title: 'Nodejs user registration'});
    })

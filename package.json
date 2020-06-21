@@ -10,8 +10,10 @@
 		"dotenv": "^8.2.0",
 		"ejs": "^2.5.6",
 		"express": "^4.17.1",
+		"express-validator": "^6.6.0",
 		"mongodb": "^3.5.9",
 		"mongoose": "^5.9.19",
+		"pug": "^3.0.0",
 		"validator": "^13.1.1"
 	}
 }
