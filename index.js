@@ -3,13 +3,16 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 require('dotenv/config');
 
-//import routes
-const postsRoute = require('./routes/route');
+app.use(bodyParser.json());
 
-app.use('login', loginRoute);
+//import routes
+const loginRoute = require('./routes/route');
+
+app.use('/login', loginRoute);
 
 
 app.get('/', (req, res)=>{
