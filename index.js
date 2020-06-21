@@ -10,9 +10,13 @@ require('dotenv/config');
 app.use(bodyParser.json());
 
 //import routes
-const loginRoute = require('./routes/route');
+const loginRoute = require('./routes/login');
+const pages = require('./routes/pages');
+const register = require('./routes/register');
 
 app.use('/login', loginRoute);
+app.use('/register', register);
+app.use('/pages', pages);
 
 
 app.get('/', (req, res)=>{
