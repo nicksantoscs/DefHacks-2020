@@ -1,11 +1,14 @@
 {
 	"name": "we-blooom",
 	"version": "1.0.0",
-	"scripts":{
+	"scripts": {
 		"start": "node index.js"
 	},
 	"dependencies": {
+		"dotenv": "^8.2.0",
 		"ejs": "^2.5.6",
-		"express": "^4.15.2"
-	  }
+		"express": "^4.17.1",
+		"mongodb": "^3.5.9",
+		"mongoose": "^5.9.19"
+	}
 }
