@@ -9,7 +9,7 @@ block content
           .alert.alert-danger(role='alert', id="msgDiv")
 
         .form-group
-          label.col-sm-3.control-label(for="fullname")
+          label.col-sm-3.control-label(for="name")
            strong Full Name
           .col-sm-9
             input#fullname.form-control(type="text" placeholder="Full Name" autofocus="" value="")
@@ -34,18 +34,14 @@ block content
           .col-sm-9
             input#dob.form-control(type="date")
         .form-group
-          label.col-sm-3.control-label(for="country")
-           strong Country
+          label.col-sm-3.control-label(for="type")
+           strong Type
           .col-sm-9
-            select#country.form-control
+            select#type.form-control
               option(value='') Please Select
-              option USA
-              option United Kingdom
-              option Germany
-              option Denmark
-              option Ecuador
-              option Canada
-              option France
+              option Employee
+              option Patients
+              option Workers
               option Others
         .form-group
           label.control-label.col-sm-3
@@ -60,25 +56,8 @@ block content
                 label.radio-inline
                   input#maleRadio(name="gender" type="radio" value="Male")
                   | &nbsp;Male
-        .form-group
-          label.control-label.col-sm-9
-           strong Meal Preference
-          .col-sm-9
-            .checkbox
-              label
-                input#calorieCheckbox(type="checkbox" value="Calorie" name="calorie")
-                | &nbsp;Low calorie
-            .checkbox
-              label
-                input#saltCheckbox(type="checkbox" value="Salt"  name="salt")
-                | &nbsp;Low salt
-        .form-group
-          .col-sm-9.col-sm-offset-3
-            .checkbox
-              label
-                input#terms(type="checkbox" value="yes" name="terms")
-                | &nbsp;I accept
-                a(href="#") terms
+
         .form-group
           .col-sm-9.col-sm-offset-3
             button#register.btn.btn-primary.btn-block(type="e") Register
+        a(href="/login") login
